@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react';
-import logo from './assets/nlw-logo.svg';
 import { NewNoteCard } from './components/new-note-card';
 import { NoteCard } from './components/note-card';
+import { NotebookPen } from 'lucide-react';
 
 interface Note {
   id: string;
@@ -60,17 +60,20 @@ export function App() {
 
   return (
     <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
-      <img src={logo} alt="NLW" />
+      <div className="flex items-center gap-2 text-2xl text-gray-600 font-semibold">
+        <NotebookPen />
+        <span>Notes</span>
+      </div>
       <form className="w-full">
         <input
           type="text"
           placeholder="Busque em suas notas..."
-          className="w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500"
+          className="w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-gray-500"
           onChange={handleSearch}
         />
       </form>
 
-      <div className="h-px bg-slate-700" />
+      <div className="h-px bg-gray-700" />
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
         <NewNoteCard onNoteCreated={onNoteCreated} />
