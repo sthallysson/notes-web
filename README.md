@@ -1,6 +1,6 @@
 # 📑Notes
 
-Um app de notas pessoas criadas por audio ou texto feito na NLW da Rocketseat.
+Um app de notas pessoais criadas por audio ou texto feito na NLW da Rocketseat.
 
 ## Funcionalidades
 
