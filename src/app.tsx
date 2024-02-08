@@ -49,12 +49,12 @@ export function App() {
       : notes;
 
   return (
-    <div className="mx-auto max-w-6xl my-12 space-y-6">
+    <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
       <img src={logo} alt="NLW" />
       <form className="w-full">
         <input
           type="text"
-          placeholder="Busque em suas notas"
+          placeholder="Busque em suas notas..."
           className="w-full bg-transparent text-3xl font-semibold tracking-tight outline-none placeholder:text-slate-500"
           onChange={handleSearch}
         />
@@ -62,7 +62,7 @@ export function App() {
 
       <div className="h-px bg-slate-700" />
 
-      <section className="grid grid-cols-3 gap-6 auto-rows-[250px]">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
         <NewNoteCard onNoteCreated={onNoteCreated} />
 
         {filtredNotes.map((note) => (
